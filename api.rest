@@ -1,0 +1,3 @@
+#GET Route principal
+
+GET http://localhost:3000/
