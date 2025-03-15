@@ -21,35 +21,48 @@
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-## Description
+<body>
+    <h1>🚀 API Gestion des Produits et Achats 🛍️</h1>
+    <p>Bienvenue dans ce projet d'API 🏗️ qui permet de gérer des utilisateurs 👤, des produits 🛒 et des achats 💳, le tout avec une authentification sécurisée 🔐 !</p>
 
-Voici les méthodes que tu dois implémenter dans tes services pour bien gérer les utilisateurs, les produits et les achats :
+    <h2>✨ Fonctionnalités</h2>
+    <ul>
+        <li>🔑 Authentification avec JWT</li>
+        <li>🛍️ Gestion des produits (ajout, suppression, mise à jour)</li>
+        <li>💰 Gestion des achats avec mise à jour automatique du stock</li>
+        <li>❌ Annulation des achats avec restauration du stock</li>
+        <li>⚡ Sécurisation des routes avec AuthGuard</li>
+    </ul>
 
-1. Service Utilisateur (UsersService)
-Créer un utilisateur
-Récupérer un utilisateur par ID
-Récupérer tous les utilisateurs
-Mettre à jour un utilisateur
-Supprimer un utilisateur
-Récupérer les produits vendus par un utilisateur
-Récupérer les produits achetés par un utilisateur
-2. Service Produit (ProductsService)
-Créer un produit
-Récupérer un produit par ID
-Récupérer tous les produits
-Mettre à jour un produit
-Supprimer un produit
-Récupérer le vendeur d’un produit
-Récupérer les acheteurs d’un produit
-3. Service Achat (PurchasesService)
-Créer un achat (lier un utilisateur et un produit)
-Récupérer un achat par ID
-Récupérer tous les achats
-Récupérer les produits achetés par un utilisateur
-Récupérer les utilisateurs ayant acheté un produit
-💡 Bonus (Facultatif mais utile)
+    <h2>🛠️ Installation</h2>
+    <pre><code>git clone https://github.com/ton-repo.git
+cd ton-repo
+npm install</code></pre>
 
-Filtrer les produits par prix, catégorie, stock, etc.
-Pagination et tri des utilisateurs et des produits
-Gestion des transactions pour éviter les erreurs de paiement
-Tu as maintenant une structure claire pour tes services ! 🚀
+    <h2>🚀 Lancer l'application</h2>
+    <pre><code>npm run start</code></pre>
+
+    <h2>📡 Endpoints API Principaux</h2>
+    <h3>👤 Utilisateurs</h3>
+    <ul>
+        <li><code>POST /auth/signup</code> - Inscription</li>
+        <li><code>POST /auth/signin</code> - Connexion</li>
+        <li><code>GET /users/me</code> - Récupérer ses infos</li>
+    </ul>
+    
+    <h3>🛒 Produits</h3>
+    <ul>
+        <li><code>POST /products</code> - Ajouter un produit</li>
+        <li><code>GET /products</code> - Voir tous les produits</li>
+        <li><code>DELETE /products/:id</code> - Supprimer un produit</li>
+    </ul>
+    
+    <h3>💳 Achats</h3>
+    <ul>
+        <li><code>POST /purchase/:productId</code> - Acheter un produit</li>
+        <li><code>DELETE /purchase/:id</code> - Annuler un achat</li>
+    </ul>
+
+    <h2>🎉 Félicitations !</h2>
+    <p>Ton API est prête à être utilisée 🚀🔥 ! Amuse-toi bien à tester et améliorer ton projet 😃 !</p>
+</body>
