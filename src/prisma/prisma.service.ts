@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.ts                                            :+:      :+:    :+:   */
+/*   prisma.service.ts                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbah <mbah@student.42lyon.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/13 01:04:00 by mbah              #+#    #+#             */
-/*   Updated: 2025/03/13 04:35:10 by mbah             ###   ########.fr       */
+/*   Created: 2025/03/13 01:41:47 by mbah              #+#    #+#             */
+/*   Updated: 2025/03/13 03:48:15 by mbah             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-import { NestFactory } from '@nestjs/core';
-import { AppModule } from './app.module';
-import { ValidationPipe } from '@nestjs/common';
+import { Injectable, OnModuleDestroy, OnModuleInit } from '@nestjs/common';
+import { PrismaClient } from '@prisma/client';
 
-async function bootstrap() {
-  const app = await NestFactory.create(AppModule);
-  app.useGlobalPipes(new ValidationPipe(
-	{
-		whitelist: true,
-		transform: true
+@Injectable()
+export class PrismaService extends PrismaClient implements OnModuleInit, OnModuleDestroy {
+	async onModuleInit() {
+		await (this.$connect());
 	}
-  ));
-  await app.listen(process.env.PORT ?? 3000);
+
+	async onModuleDestroy() {
+		await (this.$disconnect());
+	}
 }
-bootstrap();

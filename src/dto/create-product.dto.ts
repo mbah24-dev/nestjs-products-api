@@ -6,11 +6,11 @@
 /*   By: mbah <mbah@student.42lyon.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/13 22:23:28 by mbah              #+#    #+#             */
-/*   Updated: 2025/03/13 22:30:48 by mbah             ###   ########.fr       */
+/*   Updated: 2025/03/15 21:35:13 by mbah             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-import { IsNotEmpty, IsNumber, IsString } from 'class-validator';
+import { IsInt, IsNotEmpty, IsNumber, IsString, Min } from 'class-validator';
 
 export class CreateProductDto {
 
@@ -22,7 +22,18 @@ export class CreateProductDto {
   @IsNotEmpty()
   price: number;
 
-  @IsNumber()
-  @IsNotEmpty()
+  @IsInt()
+  @Min(1)
   stock: number;
+
+  @IsString()
+  @IsNotEmpty()
+  @Min(5)
+  description: string;
+
+  @IsString()
+  @IsNotEmpty()
+  @Min(2)
+  category: string;
+  
 }
