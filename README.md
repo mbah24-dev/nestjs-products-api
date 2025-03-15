@@ -25,7 +25,7 @@
     <h1>🚀 API Gestion des Produits et Achats 🛍️</h1>
     <p>Bienvenue dans ce projet d'API 🏗️ qui permet de gérer des utilisateurs 👤, des produits 🛒 et des achats 💳, le tout avec une authentification sécurisée 🔐 !</p>
 
-    <h2>✨ Fonctionnalités</h2>
+   <h2>✨ Fonctionnalités</h2>
     <ul>
         <li>🔑 Authentification avec JWT</li>
         <li>🛍️ Gestion des produits (ajout, suppression, mise à jour)</li>
@@ -34,35 +34,35 @@
         <li>⚡ Sécurisation des routes avec AuthGuard</li>
     </ul>
 
-    <h2>🛠️ Installation</h2>
-    <pre><code>git clone https://github.com/ton-repo.git
+  <h2>🛠️ Installation</h2>
+  <pre><code>git clone https://github.com/ton-repo.git
 cd ton-repo
 npm install</code></pre>
 
-    <h2>🚀 Lancer l'application</h2>
+  <h2>🚀 Lancer l'application</h2>
     <pre><code>npm run start</code></pre>
 
-    <h2>📡 Endpoints API Principaux</h2>
+  <h2>📡 Endpoints API Principaux</h2>
     <h3>👤 Utilisateurs</h3>
     <ul>
         <li><code>POST /auth/signup</code> - Inscription</li>
         <li><code>POST /auth/signin</code> - Connexion</li>
         <li><code>GET /users/me</code> - Récupérer ses infos</li>
-    </ul>
+  </ul>
     
-    <h3>🛒 Produits</h3>
+  <h3>🛒 Produits</h3>
     <ul>
         <li><code>POST /products</code> - Ajouter un produit</li>
         <li><code>GET /products</code> - Voir tous les produits</li>
         <li><code>DELETE /products/:id</code> - Supprimer un produit</li>
     </ul>
     
-    <h3>💳 Achats</h3>
+  <h3>💳 Achats</h3>
     <ul>
         <li><code>POST /purchase/:productId</code> - Acheter un produit</li>
         <li><code>DELETE /purchase/:id</code> - Annuler un achat</li>
     </ul>
 
-    <h2>🎉 Félicitations !</h2>
+  <h2>🎉 Félicitations !</h2>
     <p>Ton API est prête à être utilisée 🚀🔥 ! Amuse-toi bien à tester et améliorer ton projet 😃 !</p>
 </body>
